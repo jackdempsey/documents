@@ -9,6 +9,10 @@ module Documents
 
     mount_uploader :file, BasicDocumentUploader
 
+    def to_s
+      File.basename(file.to_s)
+    end
+
     def as_json(options=nil)
       {
         name: read_attribute(:file),

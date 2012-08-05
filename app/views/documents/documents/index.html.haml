@@ -38,7 +38,7 @@
   %ul.list.list_document
     - @documents.each do |document|
       %li
-        = link_to document.file.url, document
+        = link_to document, document
 
 - else
   No documents currently.
