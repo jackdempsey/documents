@@ -1,2 +1,5 @@
-Documents::Engine.routes.draw do
+Documents::Engine.routes.draw do root to: 'dashboard#index'
+
+  get "dashboard/index"
+
 end
