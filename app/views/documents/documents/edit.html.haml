@@ -1,0 +1,8 @@
+%h1
+  Edit Image
+
+= form_for @image do |f|
+  = render 'form', f: f
+  .actions
+    = f.submit
+

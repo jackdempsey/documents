@@ -1,0 +1,44 @@
+- content_for :css do
+  :css
+    .list_image {
+      list-style: none;
+    }
+
+    .list_image li {
+      float: left;
+      height: 200px;
+      width: 200px;
+      overflow: hidden;
+    }
+
+%h1
+  Document Index
+
+.actions
+  %h3
+    Search
+  = form_tag search_documents_path do
+    = text_field_tag :q
+    = submit_tag 'Search'
+    = link_to 'Clear', documents_path
+
+%h3
+  - if params[:tag]
+    Documents tagged with
+    = surround("\"") do
+      = params[:tag]
+
+  - elsif params[:q]
+    Documents with text
+    = surround("\"") do
+      = params[:q]
+
+
+- if @documents.present?
+  %ul.list.list_document
+    - @documents.each do |document|
+      %li
+        = link_to document.file.url, document
+
+- else
+  No documents currently.
