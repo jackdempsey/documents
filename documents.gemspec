@@ -7,11 +7,11 @@ require "documents/version"
 Gem::Specification.new do |s|
   s.name        = "documents"
   s.version     = Documents::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Documents."
-  s.description = "TODO: Description of Documents."
+  s.authors     = ["Jack Dempsey"]
+  s.email       = ["jack.dempsey@gmail.com"]
+  s.homepage    = ""
+  s.summary     = "Rails 3 engine that provides basic document uploading and management functionality"
+  s.description = "Rails 3 engine that provides basic document uploading and management functionality"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
